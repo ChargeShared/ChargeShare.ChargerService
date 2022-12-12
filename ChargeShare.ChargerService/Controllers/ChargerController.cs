@@ -4,7 +4,7 @@
 
 namespace ChargeShare.ChargerService.Controllers
 {
-    [Route("api/Chargers")]
+    [Route("api/chargers")]
     [ApiController]
     public class ChargerController : ControllerBase
     {
