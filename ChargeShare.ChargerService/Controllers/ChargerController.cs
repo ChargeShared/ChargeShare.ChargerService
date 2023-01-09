@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ChargeShare.ChargerService.DAL.DTOs;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +10,9 @@ namespace ChargeShare.ChargerService.Controllers
     [ApiController]
     public class ChargerController : ControllerBase
     {
+
+        private IEnumerable<IdentityError> _errors { get; set; }
+
         // GET: api/<Chargers>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -23,9 +28,18 @@ namespace ChargeShare.ChargerService.Controllers
         }
 
         // POST api/<Chargers>
+        // Endpoint to create new chargers
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] ChargerDTO charger)
         {
+            if (ModelState.IsValid)
+            {
+                //handel new charger
+            }
+            else
+            {
+                
+            }
         }
 
         // PUT api/<Chargers>/5

@@ -22,4 +22,8 @@
     <ProjectReference Include="..\ChargeShare.Shared\ChargeShare.Shared\ChargeShare.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DAL\DTOs\" />
+  </ItemGroup>
+
 </Project>
