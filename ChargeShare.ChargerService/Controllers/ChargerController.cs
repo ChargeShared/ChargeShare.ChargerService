@@ -38,7 +38,10 @@ namespace ChargeShare.ChargerService.Controllers
             }
             else
             {
-                
+                foreach (var error in _errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
             }
         }
 
