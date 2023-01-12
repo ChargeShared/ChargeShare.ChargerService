@@ -8,7 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["ChargeShare.ChargerService/ChargeShare.ChargerService.csproj", "ChargeShare.ChargerService/"]
-COPY ["ChargeShare.Shared/ChargeShare.Shared/ChargeShare.Shared.csproj", "ChargeShare.Shared/ChargeShare.Shared/"]
 RUN dotnet restore "ChargeShare.ChargerService/ChargeShare.ChargerService.csproj"
 COPY . .
 WORKDIR "/src/ChargeShare.ChargerService"

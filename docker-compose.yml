@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  chargeshare.chargerservice:
+    image: ${DOCKER_REGISTRY-}chargesharechargerservice
+    build:
+      context: .
+      dockerfile: ChargeShare.ChargerService/Dockerfile
