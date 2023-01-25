@@ -50,8 +50,9 @@ namespace ChargeShare.ChargerService.Controllers
                 //handel new charger
                 try
                 {
-                    ChargeSharedUserModel user = await _manager.GetUserAsync(User);
-                    return Ok(await _chargerService.RegisterCharger(charger, user));
+                    /*ChargeSharedUserModel user = await _manager.GetUserAsync(User);*/
+                    return Ok(User); 
+                    /*return Ok(await _chargerService.RegisterCharger(charger, user));*/
                 }
                 catch (Exception e)
                 {
